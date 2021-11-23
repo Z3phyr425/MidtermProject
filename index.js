@@ -1,5 +1,5 @@
 let btn = document.querySelector("#btn");
-let sidebar = document.querySelector(".sidebar");
+let sidebar = document.querySelector(".sidebarmain");
 let searchbtn = document.querySelector("#searchbtn");
 
 btn.onclick = function(){
