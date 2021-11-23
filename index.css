@@ -130,7 +130,7 @@ body{
 
 #sidebar .profile_info .profile{
     position: relative;
-    padding: 10px 6px;
+    padding: 10px 0px;
     height: 60px;
     width: 100%;
 }
