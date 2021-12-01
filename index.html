@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
     <title>Eastwoods College</title>
+    
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
     <link rel="shortcut icon" href="images/ecst_logo.png" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 </head>
@@ -14,81 +19,126 @@
     <div id="sidebar-container" class="sidebar container-lg-fluid" >
         <div class="row">
             <div id="sidebar" class="col-lg-2 h-100 w-100">
-                <div class="container-fluid text-light bg-gradient mh-100 h-100 sidebarmain" style="background-color: #009688">
+                <div class="container-fluid text-light bg-gradient mh-100 h-100 sidebarmain" style="background-color: #0a3229">
                     <div id="logoContainer">
-                        <img src="images/ecst_logo.png" style="width: 40px; margin-top: -10px; margin-right: 5px; margin-left: -10px;"alt=""><span class="fs-3">Eastwoods College</span>    
+                        <img src="/images/ecst_logo.png" style="width: 40px; margin-top: -10px; margin-right: 5px; margin-left: -10px;"alt=""><span class="fs-3 ecst">Eastwoods College</span>    
                     </div>
                     <i id="btn" class="bi bi-list"></i>
                     <ul>
-                        <li>
+                        <!--<li id="searchBar">
                             <i id="searchbtn" class="bi bi-search"></i>
                             <input type="text" placeholder="Search...">
+                            <span class="tooltips">Search</span>
                         </li>
                         <li>
                             <a href="#Home">
                                 <i class="bi bi-house-fill"></i>
-                                <span>Home</span>
+                                <span class="labels">Courses</span>
                             </a>
-                            <span class="tooltips">Home</span>
+                            <span class="tooltips">Courses</span>
+                        </li>-->
+                        <li>
+                            <a href="#Contact Us">
+                                <i class="bi bi-telephone-fill"></i>
+                                <span class="labels">Contact Us</span>
+                            </a>
+                            <span class="tooltips">Contact Us</span>
                         </li>
                         <li>
-                            <a href="#Dashboard">
-                                <i class="bi bi-speedometer"></i>
-                                <span>Dashboard</span>
+                            <a href="#Scholarship">
+                                <i class="bi bi-mortarboard-fill"></i>
+                                <span class="labels">Scholarship</span>
                             </a>
-                            <span class="tooltips">Dashboard</span>
-                        </li>
-                        <li>
-                            <a href="#Events">
-                                <i class="bi bi-calendar-day-fill"></i>
-                                <span>Events</span>
-                            </a>
-                            <span class="tooltips">Events</span>
+                            <span class="tooltips">Scholarship</span>
                         </li>
                         <li>
                             <a href="#Courses">
                                 <i class="bi bi-book-half"></i>
-                                <span>Courses</span>
+                                <span class="labels">Courses</span>
                             </a>
                             <span class="tooltips">Courses</span>
                         </li>
                         <li>
-                            <a href="#Messages">
-                                <i class="bi bi-chat-dots-fill"></i>
-                                <span>Messages</span>
+                            <a href="#Facilities">
+                                <i class="bi bi-building"></i>
+                                <span class="labels">Facilities</span>
                             </a>
-                            <span class="tooltips">Messages</span>
+                            <span class="tooltips">Facilities</span>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="#Settings">
                                 <i class="bi bi-gear-fill"></i>
-                                <span>Settings</span>
+                                <span class="labels">Settings</span>
                             </a>
                             <span class="tooltips">Settings</span>
-                        </li>
+                        </li>-->
                     </ul>
                     <div class="profile_info container-fluid">
                         <div class="profile">
                             <div class="profile_details">
-                                <img src="images/mark.jpg" style="width:50px;height:50px; border-radius: 15px; object-fit: cover;" alt="">
-                                <span class="info"><div class="name">Mark Angelo M. Tungol</span>
+                                <!--<img src="/images/mark.jpg" style="width:50px;height:50px; border-radius: 15px; object-fit: cover;" alt="">-->
+                                <span class="info"></span>
                                 <br>
-                                <span class="yearLevelSection">IT-202</span>  
+                                <!--<span class="yearLevelSection info">IT-202</span>-->
                             </div>
                         </div>
                     </div>
-                    <i class="bi bi-box-arrow-left" id="logOut"></i>
+                    <!--<i class="bi bi-box-arrow-left" id="logOut"></i>-->
+                    <a href="https://www.facebook.com/eastwoodsdinalupihan" style="text-decoration: none; color: #ececec;"><i class="bi bi-facebook icons" id="facebook"></i></a>
+                    <a href="" style="text-decoration: none; color: #ececec;"><i class="bi bi-twitter icons" id="twitter"></i></a>
+                    <a href="" style="text-decoration: none; color: #ececec;"><!--<img src="/images/moodle_logo.png" id="moodle" alt="">--><i class="bi bi-google icons" id="google"></i></a>
                 </div>
             </div>
+            <div class="container-fluid title" id="title">
+                
+                    <div  id="heading1" >Eastwoods College of Science and Technology</div>
+
+            </div>
+            
         </div>
-        <div class="container-fluid title">
-            <h1>Home</h1>
-        </div>  
+        
     </div>
+    <div id="imageBackground">
+    </div>
+    <div id="whiteBox">
+        <img src="/images/ecst_logo.png" alt="">
+            <pre>
+                <h3>            Mission</h3>
+                    To develop and offer high quality technical, 
+                health and higher education programs that  would 
+                ensure employability and productivity  of young 
+                men and women through proper values and principles 
+                as a means to achieve success with excellence 
+                for a better quality of life.
+            </pre>
+            <pre>
+            <h3>           Vision</h3>
+                A center of excellence in technical, vocational, health 
+            and higher education in Bataan, pursuing dynamic
+            program offerings paralleled to global standards to 
+            uplift the socio-economic growth of the province.
+            </pre>
+    </div>
+    <div id="imageBackgroundNotebook">
+        <div id="eduContent">
+            <h2>HISTORY of EASTWOODS College of Science and Technology<br>(formerly EASTWOODS International Institute of Science and Technology)</h2>
+            <br>
+            <p>EASTWOODS International Institute of Science and Technology, was the 3rd institution founded in Bataan by the President Mr.  Gregorio M.  Sison Jr, <br>where the first was EASTWOODS Professional College of Science and Technology (formerly SOFTNET College) in Balanga City founded in 1994, and<br> second was SOFTNET Information Technology Center in Mariveles founded in 1997. </p>
+            <p>During the first year of operation, it already hit 196 students renting the 3rd and 2nd Floor of the 3-storey Masagana Bldg.  On 2007, its second year of<br> operation, EASTWOODS - Dinalupihan increased the number of enrollees to 434 students and already occupied the whole building. </p>
+        </div>     
+    </div>
+     <div id="footer">
+         <h3>Contacts and Address</h3>
+        <p>
+            School Address: San Ramon, Dinalupihan, Bataan<br>
+            Facebook Page: eastwoodscollegedinalupihan<br>
+            Telefax: (047) 636-1571 Cell phone #: 09088923007<br>
+        </p>
+     </div>
     
     <script src="index.js"></script>
         
-    </script>
+    
 
 </body>
 </html>
