@@ -7,10 +7,10 @@
 }
 .sidebarmain{
     width: 90px;
-    transition: all 0.5s ease
+    transition: all 0.5s ease;
 }
 .sidebarmain.active{
-    width: 324px;
+    width: 315px;
 }
 
 body{
@@ -18,6 +18,7 @@ body{
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+
 }
 .sidebarmain.active #logoContainer{
     opacity: 1;
@@ -30,11 +31,13 @@ body{
     pointer-events: none;
     transition: all 0.5s ease;
 }
-
+#logoContainer .ecst{
+    white-space: nowrap;
+}
 #btn{
     position: absolute;
     left: 23%;
-    top:5%;
+    top:4%;
     height: 50px;
     width: 50px;
     text-align: left;
@@ -42,12 +45,25 @@ body{
     transform: translateX(10%);
     transform: translateY(-30%);
     transition: all 0.5s ease;
-    font-size: 50px
+    font-size: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    
 }
+#btn:hover{
+    background-color: #ececec;
+    color: #0a3229;
+}
+.sidebarmain.active #btn:hover{
+    background: none;
+    color: #ececec;
+}
+
 .sidebarmain.active #btn{
     left: 87%;
     top:0%;
     font-size: 20px;
+    background-color: none;
 }
 
 
@@ -63,10 +79,20 @@ body{
     width: 100%;
     margin: 0 5px;
     line-height:50px;
+    white-space: nowrap;
 }
+#sidebar ul li .labels{
+    opacity: 0;
+    pointer-events: none;
+}
+#sidebar.active ul li .labels{
+    opacity: 1;
+    pointer-events: auto;
+}
+
 #sidebar ul li .tooltips{
     position: absolute;
-    left: 122px;
+    left:70px;
     top: 0;
     height: 35px;
     width: 122px;
@@ -76,28 +102,40 @@ body{
     border-radius: 6px;
     line-height: 35px;
     text-align: center;
-    color: black;
+    color: #0a3229;
     transition: 0s;
     opacity: 0;
     pointer-events: none;
+    display: block;
 }
 #sidebar ul li:hover .tooltips{
     top: 50%;
     opacity: 1;
     transition: all 0.5s ease;
 }
+#sidebar.active ul li .tooltips{
+    display: none;
+}
+#sidebar ul #searchBar{
+    margin-top: -30px;
+    transition: all 0.5s ease;
+}
+
+#sidebar.active ul #searchBar{
+    margin-top: 0px;
+}
 
 #sidebar ul li input{
     position: absolute;
     height: 50px;
     width: 100%;
-    left: 0;
+    left: -1px;
     top: 0;
     border-radius: 12px;
     outline: none;
     border: none;
     line-height: 50px;
-    background-color: #009688;
+    background-color: #0b4437;
     color: #ececec;
     padding-left: 50px;
     font-size: 17px;
@@ -106,13 +144,19 @@ body{
 ::placeholder{
     color: #ececec;
 }
-
+#sidebar ul li #searchbtn:hover{
+    background-color: #ececec;
+    color: #0a3229;
+}
 #sidebar ul li #searchbtn{
+    border-radius: 12px;
     position:absolute;
     z-index: 99;
     top: 0;
     font-size: 18px;
     color: #ececec;
+    transition: all 0.5s ease;
+    cursor: pointer;
 }
 
 
@@ -125,7 +169,7 @@ body{
     border-radius:12px;
 }
 #sidebar ul li a:hover{
-    color: #009688;
+    color: #0a3229;
     background-color: #ececec;
 }
 
@@ -141,7 +185,7 @@ body{
     position:absolute;
     bottom:2%;
     left:0; 
-    background-color: #00b1a0;
+    background-color: #246858;
     margin-bottom: -18px;
     padding-bottom: 15px;
 }
@@ -183,12 +227,208 @@ body{
     transform: translateY(-30%);
 }
 
-.title{
+#sidebar.active .icons{
+    display: inline-block;
+    opacity:1;
+    bottom: 0%;
+    left: 26%;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    white-space: nowrap;
+}
+
+#sidebar.active #twitter{
+    margin-left: 15.5%;
+    float: none;
+    margin-top: 0px;
+}
+#sidebar.active #facebook{
+    margin-left: 0px;
+    float: none;
+    margin-top: 0px;
+}
+
+#sidebar.active #google{
+    margin-left: 31.5%;
+    float: none;
+    margin-top: 0px;
+}
+.icons{
     position: absolute;
+    left: 1%;
+    bottom: 20px;
+    font-size: 20px;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 24px;
+    transform: translateX(-300%);
+    transform: translateY(-30%);
+    opacity:1;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+#facebook{
+    transition: all 0.5s ease;
+    border-radius: 3px;
+    float: left;
+    margin-top: -50px;
+    
+}
+#facebook:hover{
+    background-color: #ececec;
+    color: #246858;
+}
+
+#twitter{
+    margin-left: 30px;
+    float: left;
+    margin-top: -50px;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+}
+#twitter:hover{
+    background-color: #ececec;
+    color: #246858;
+}
+#google{
+    margin-left: 60px;
+    float: left;
+    margin-top: -50px;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+}
+#google:hover{
+    background-color: #ececec;
+    color: #246858;
+}
+
+/*#moodle{
+    margin-left: 40px;
+    float: left;
+    margin-top: 590px;
+    transition: all 0.5s ease;
+    border-radius: 3px;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    position: absolute;
+}
+#moodle:hover{
+    background-color: #ececec;
+    color: #246858;
+}*/
+
+#heading1{
+    margin-left: 12px;
+    font-size: 3vw;
+    font-weight: 400;
+    margin-top: -34px;
+}
+
+#sidebar .info{
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+#sidebar.active .info{
+    opacity: 1;
+}
+.title{
+    top: -15px;
+    position:absolute;
     height: 100%;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+    white-space: pre;
+    display: inline-block;
+    color: white;
+
+}
+#sidebar.active ~ .title{
     width: calc(100% - 300px);
     left: 300px;
 }
-.title h1{
-    margin: 12px;
+
+#imageBackground{
+    width: 100%;
+    height: 110vh;
+    background-image: url(/images/bg-ecst.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top:0;
+}
+
+#whiteBox{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /*background-color: #ececec;
+    transform: translateX(30%);
+    transform: translateY(10%);*/
+}
+#whiteBox pre{
+    font-size: 1vw;
+    text-align: center;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: #7a7a7a;
+}
+#whiteBox pre h3{
+    color: #333;
+    font-size: 1.5vw;
+}
+
+#whiteBox img{
+    width: 50vh;
+    height: 50vh;
+    float: left;
+    margin-top: 50px;
+    margin-left: 300px;
+    transition: all 0.15s ease-in;
+    cursor: pointer;
+}
+#whiteBox img:hover{
+    transform: scale(1.02); 
+}
+
+#imageBackgroundNotebook{
+    background-image: url(/images/book.jpg);
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    display: block;
+    background-attachment: fixed;
+}
+
+#eduContent{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 50vh;
+    color: #ececec;
+    padding-left: 120px;
+    padding-top: 30px;
+}
+#eduContent p{
+    margin-left: auto;
+    text-align: top center;
+    font-size: 20px;
+    font-family: Roboto;
+}
+
+#footer{
+    width: 100%;
+    height: 175px;
+    background-color: #333;
+    padding-left: 125px;
+    padding-top: 30px;
+}
+#footer p{
+    color: #cdcdcd;
+}
+#footer h3{
+    color: #ececec;
 }
